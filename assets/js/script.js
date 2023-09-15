@@ -1,7 +1,21 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
+
+let timeDisplayEl = $('#currentDay');
+
+// This handles displaying the time
+function displayTime() {
+  var todayDayDate = dayjs().format('dddd, MMMM DD, YYYY');
+  timeDisplayEl.text(todayDayDate);
+};
+
+
+
+
+
 $(function () {
+
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
@@ -21,3 +35,6 @@ $(function () {
   //
   // TODO: Add code to display the current date in the header of the page.
 });
+
+displayTime();
+setInterval(displayTime, 1000);
