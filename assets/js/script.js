@@ -1,4 +1,4 @@
-// Sets the variable for displaying the day and date on the webpage.
+// This sets the variable for displaying the day and date on the webpage.
 let dayDisplayEl = $('#currentDay');
 
 // This handles displaying the day and date.
@@ -7,7 +7,7 @@ function displayDayDate() {
   dayDisplayEl.text(todaysDayDate);
 };
 
-// Function that is called once everything renders on the webpage.
+// This function is called once everything renders on the webpage.
 function plannerHourColorSwitcher() {
   // Tracks the current hour in the day.
   let rightNow = dayjs().hour();
