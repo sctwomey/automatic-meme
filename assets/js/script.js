@@ -61,4 +61,4 @@ $(function () {
 });
 
 displayDate();
-setInterval(displayTime, 1000);
+setInterval(displayDate, 1000);
