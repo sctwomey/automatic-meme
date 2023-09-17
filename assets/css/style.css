@@ -1,3 +1,4 @@
+/* Sets the font style for the webpage. */
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
@@ -30,6 +31,7 @@ textarea {
   border-top: 1px dashed #000000;
 }
 
+/* Hour blocks background colors. */
 .past {
   background-color: #d3d3d3;
   color: white;
@@ -45,6 +47,7 @@ textarea {
   color: white;
 }
 
+/* Save button style. */
 .saveBtn {
   border-left: 1px solid black;
   border-top-right-radius: 15px;

@@ -1,7 +1,7 @@
 
 let dayDisplayEl = $('#currentDay');
 
-// This handles displaying the time.
+// This handles displaying the day and date.
 function displayDayDate() {
   var todaysDayDate = dayjs().format('dddd, MMMM DD, YYYY');
   dayDisplayEl.text(todaysDayDate);
