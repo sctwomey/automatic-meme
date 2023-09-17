@@ -6,15 +6,20 @@ let timeDisplayEl = $('#currentDay');
 
 // This handles displaying the time
 function displayTime() {
-  var todayDayDate = dayjs().format('dddd, MMMM DD, YYYY');
-  timeDisplayEl.text(todayDayDate);
+  var todaysDayDate = dayjs().format('dddd, MMMM DD, YYYY');
+  timeDisplayEl.text(todaysDayDate);
 };
 
-
-
-
-
 $(function () {
+
+  // This is the event listener for the save button (saveBtn).
+  $(".saveBtn").on("click", function () {
+    var timeText = $(this).siblings(".description").val();
+    var blockTime = $(this).parent().attr("id");
+    // This saves the text from the time blocks into the local storage.
+    localStorage.setItem(blockTime, timeText);
+  });
+
 
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
