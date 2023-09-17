@@ -34,12 +34,13 @@ function plannerHourColorSwitcher() {
   });
 };
 
+// This is the function for saving user input in the hour blocks.
 $(function () {
   // This is the event listener for the save button (saveBtn).
   $(".saveBtn").on("click", function () {
     var hourText = $(this).siblings(".description").val();
     var blockHour = $(this).parent().attr("id");
-    // This saves the text from the time blocks into the local storage.
+    // This saves the text from the hour blocks into the local storage.
     localStorage.setItem(blockHour, hourText);
   });
 
