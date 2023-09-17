@@ -1,10 +1,10 @@
 // This sets the variable for displaying the day and date on the webpage.
-let dayDisplayEl = $('#currentDay');
+const dayDisplayEl = $('#currentDay');
 
 // This handles displaying the day and date.
-function displayDayDate() {
-  var todaysDayDate = dayjs().format('dddd, MMMM DD, YYYY');
-  dayDisplayEl.text(todaysDayDate);
+function displayDate() {
+  let todaysDate = dayjs().format('dddd, MMMM DD, YYYY');
+  dayDisplayEl.text(todaysDate);
 };
 
 // This function is called once everything renders on the webpage.
@@ -13,7 +13,7 @@ function plannerHourColorSwitcher() {
   let rightNow = dayjs().hour();
 
   $(".time-block").each(function () {
-    var hourBlock = parseInt($(this).attr("id").split("hour")[1] * -1);
+    let hourBlock = parseInt($(this).attr("id").split("hour")[1] * -1);
     // This Compares the hours in the hour blocks, and adds the matching classes for the matching background colors.
     if (hourBlock < rightNow) {
       $(this).removeClass("future");
@@ -60,5 +60,5 @@ $(function () {
 
 });
 
-displayDayDate();
+displayDate();
 setInterval(displayTime, 1000);
