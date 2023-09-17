@@ -1,4 +1,4 @@
-
+// Sets the variable for displaying the day and date on the webpage.
 let dayDisplayEl = $('#currentDay');
 
 // This handles displaying the day and date.
